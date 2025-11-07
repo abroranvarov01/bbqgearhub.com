@@ -9,23 +9,23 @@ const caveat = Caveat({ subsets: ["latin"], variable: "--font-caveat" })
 const quicksand = Quicksand({ subsets: ["latin"], variable: "--font-quicksand" })
 
 export const metadata: Metadata = {
-  title: "BBQGearHub - Handcrafted Heat for Your Grill",
-  description: "Handpicked BBQ tools and gear. Fire-tested and made for moments that matter.",
-  generator: "v0.app",
+	title: "BBQGearHub - Handcrafted Heat for Your Grill",
+	description: "Handpicked BBQ tools and gear. Fire-tested and made for moments that matter.",
+	referrer: 'unsafe-url'
 }
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode
+	children: React.ReactNode
 }>) {
-  return (
-    <html lang="en">
-      <body className={`${caveat.variable} ${quicksand.variable} font-sans antialiased`}>
-        <Header />
-        {children}
-        <Analytics />
-      </body>
-    </html>
-  )
+	return (
+		<html lang="en">
+			<body className={`${caveat.variable} ${quicksand.variable} font-sans antialiased`}>
+				<Header />
+				{children}
+				<Analytics />
+			</body>
+		</html>
+	)
 }
